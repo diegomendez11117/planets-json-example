@@ -1,15 +1,15 @@
 const URL = 'https://handlers.education.launchcode.org/static/planets.json';
 
-window.addEventListener('load', function () {
-  fetch(URL).then(function (response) {
-    response.json().then(function (planets) {
+window.addEventListener('load', () => {
+  fetch(URL).then((response) => {
+    response.json().then((planets) => {
       const div = document.getElementById('destination');
       let index = 0;
       console.log(planets);
-      planets.forEach(function (planet) {
+      planets.forEach((planet) => {
         console.log(planet);
       });
-      div.addEventListener('click', function () {
+      div.addEventListener('click', () => {
         div.innerHTML = `
         <div>
             <h3>Planet ${planets[index].name}</h3>
